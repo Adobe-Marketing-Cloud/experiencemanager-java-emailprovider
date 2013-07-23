@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Widget"
+    dragDropMode="true"
+    fieldLabel="Select List"
+    name="./subscriptionlist"
+    xtype="multifield">
+    <fieldConfig
+        jcr:primaryType="cq:Widget"
+        fieldLabel="Select List"
+        hidden="{Boolean}false"
+        optionsProvider="CQ.EmailServiceActionsConfig.getESListOptions"
+        type="select"
+        xtype="emailServiceActionSelection">
+        <listeners
+            jcr:primaryType="nt:unstructured"
+            render="function(){if(this.value==null || typeof this.value==&quot;undefined&quot;)this.setValue(); }"/>
+    </fieldConfig>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        afterrender="function(){if(this.items.getCount()==1)this.addItem(); }"/>
+</jcr:root>

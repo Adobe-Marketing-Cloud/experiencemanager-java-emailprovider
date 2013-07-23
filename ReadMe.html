@@ -1,0 +1,21 @@
+<ul>
+<li> This package specify concrete steps and reference documentation to integrate any third party Email Service provider with Day CQ 5.6.1. </br>
+<li> This package contains source code and a CQ package. Source code "sampleemailservice" has the sample email service calls and java docs, with the help of which full implementation should be done.</br>
+<li> There are dependencies on some CQ, apache and javax artifacts.</li>
+<li> CQ package "sampleemailservicepackage" is the final package which should be installed through package share. This package will install the "sampleemailservice" bundle and node content at "/libs/mcm/sampleemailservice" </br>.
+<li> This package with install sample cloud service configuration at /etc/cloudservices/sampleemailservice, which should modified with correct serviceurl, serviceAdminUrl etc.</li>
+<li> This package will install broadly service configuration nodes - components, templates and widgets at http://no1swu356:4502/crx/de/index.jsp#/libs/mcm/sampleemailservice. </br>
+    <ul>
+        <li>components/actionConfigurations node has the dialogs to the actions or operations corresponding to the service. Required parameters can be provided to the servlet through these configuration nodes. </br> For sample example few configuration nodes are available.</li>
+        <li>components/framework corresponds to additional client side email service configuration, if any (Note: for more information you can refer already existing email service integration for ExtactTarget and SilverPop available at http://no1swu356:4502/crx/de/index.jsp#/libs/mcm/). ExactTarget and SilverPop has additional configuration for personalization.</li>
+        <li>components/newsletter corresponds to publishing the newsletter to your email service provider/</li>
+        <li>components/sampleemailservice and components/sampleemailservicepage corresponds to the could configuration page available while configuring the email service with CQ. For this sample there is property "componentReference" inside "/libs/mcm/sampleemailservice"</li>
+    </ul>
+    <ul>
+        <li>templates corresponds to the couldservice configuration of email service</li>
+    </ul>
+    <ul>
+        <li>widgets corresponds to the client specific libraries i.e. you can write your own scripts. Please note the "categories="[mcm.xemailservice]", this is in sync with the http://localhost:4502/crx/de/index.jsp#/libs/mcm/sampleemailservice/components/sampleemailservice/sampleemailservice.jsp </li>
+    </ul>
+
+</ul>
