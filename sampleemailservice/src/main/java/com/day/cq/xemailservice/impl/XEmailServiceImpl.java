@@ -34,9 +34,7 @@ import org.apache.felix.scr.annotations.Service;
 import java.util.ArrayList;
 import java.util.Map;
 
-/**
- *
- */
+
 @Component(metatype = false, label = "%cq.mcm.xemailservice.service.name", description = "%cq.mcm.xemailservice.service.description")
 @Service
 @Properties({ @Property(name = "service.description", value = "XEmailService Service Implementation") })
