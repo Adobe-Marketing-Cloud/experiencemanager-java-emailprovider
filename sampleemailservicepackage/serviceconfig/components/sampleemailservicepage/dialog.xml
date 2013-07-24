@@ -60,14 +60,6 @@
                         jcr:primaryType="nt:unstructured"
                         select="function(comp) {CQ.cloudservices.getEditOk().disable();}"/>
                 </apiendpoint>
-                <accountId
-                    jcr:primaryType="cq:Widget"
-                    fieldDescription="For Enterprise 2.0 customers this list will be filled with available accounts after successful connection with XEmailService."
-                    fieldLabel="Select Account"
-                    hidden="{Boolean}false"
-                    name="./accountId"
-                    type="select"
-                    xtype="selection"/>
                 <providerName
                     jcr:primaryType="cq:Widget"
                     ignoreData="{Boolean}true"
