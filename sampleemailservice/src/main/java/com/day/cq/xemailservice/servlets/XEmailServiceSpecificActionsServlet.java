@@ -51,7 +51,7 @@ import java.util.Map;
 @SuppressWarnings("serial")
 public class XEmailServiceSpecificActionsServlet extends SlingAllMethodsServlet {
 
-	private static final String CONFIGURATION_PATH = "cfgpath";
+    private static final String CONFIGURATION_PATH = "cfgpath";
 	
     private static final String PARAM_ERROR = "error";
 
@@ -73,17 +73,10 @@ public class XEmailServiceSpecificActionsServlet extends SlingAllMethodsServlet 
     @Reference
     private ConfigurationManager cfgMgr;
     
-    
-    /**
-	 * 
-	 */
     protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);
     }
 
-    /**
-	 * 
-	 */
     protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
         response.setContentType(CONTENT_TYPE_JSON);
         response.setCharacterEncoding(ENCODING_UTF_8);
@@ -115,7 +108,7 @@ public class XEmailServiceSpecificActionsServlet extends SlingAllMethodsServlet 
     }
 
    
-	private void handleViewPublishedEmail(SlingHttpServletRequest request,
+    private void handleViewPublishedEmail(SlingHttpServletRequest request,
 			SlingHttpServletResponse response) throws IOException, XEmailServiceException {
     	String newsletter = request.getParameter(PARAM_NEWSLETTER);
     	if(newsletter==null)
@@ -130,7 +123,7 @@ public class XEmailServiceSpecificActionsServlet extends SlingAllMethodsServlet 
         }
         else
         	writeResponse(response.getWriter(),PARAM_ERROR,"Email Service Configuration Missing or not provided");
-	}
+    }
 
 
     private Configuration getConfiguration(SlingHttpServletRequest request, SlingHttpServletResponse response,boolean formSubmission) throws IOException {
@@ -152,9 +145,8 @@ public class XEmailServiceSpecificActionsServlet extends SlingAllMethodsServlet 
         return config;
     }    
 
-    private void writeResponse(PrintWriter out, Map<String, String> keyValuePair)
-    {
-    	JSONObject json = new JSONObject();
+    private void writeResponse(PrintWriter out, Map<String, String> keyValuePair){
+      	JSONObject json = new JSONObject();
         try 
         {
             for(Map.Entry<String, String> entry : keyValuePair.entrySet())
@@ -167,9 +159,9 @@ public class XEmailServiceSpecificActionsServlet extends SlingAllMethodsServlet 
         } finally {
             out.flush();
         }    	
-	}
+    }
 
-	/**
+    /**
      * Writes a {@link JSONObject} response to the {@link SlingHttpServletResponse}. The parameter <code>msg</code> is written to the
      * property <code>propertyname</code> in the JSON object.
      * 
