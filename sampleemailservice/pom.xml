@@ -8,7 +8,7 @@
     <artifactId>cq-mcm-sampleemailservice</artifactId>
     <packaging>bundle</packaging>
     <name>Day Communique 5 Email Service Sample</name>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <description>Content package with the Sample Email Provider integration for Adobe CQ 5.6. </description>
 
     <dependencies>

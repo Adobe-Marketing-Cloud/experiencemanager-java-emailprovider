@@ -8,14 +8,14 @@
     <artifactId>cq-mcm-sampleemailservicepackage</artifactId>
     <packaging>content-package</packaging>
     <name>Day Communique 5 Email Service Sample Intergration Package</name>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <description>Content package with the Sample Email Provider integration for Adobe CQ 5.6. </description>
 
     <dependencies>
         <dependency>
             <groupId>com.day.cq.mcm</groupId>
             <artifactId>cq-mcm-sampleemailservice</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
@@ -23,7 +23,7 @@
         <resources>
             <resource>
                 <directory>${basedir}/serviceconfig</directory>
-                <targetPath>./libs/mcm/sampleemailservice</targetPath>
+                <targetPath>./apps/mcm/sampleemailservice</targetPath>
                 <filtering>false</filtering>
                 <excludes>
                     <exclude>**/.vlt</exclude>
@@ -59,8 +59,6 @@
                     <exclude>**/META-INF/**</exclude>
                     <exclude>**/.idea/**</exclude>
                 </excludes>
-
-
             </resource>
 
         </resources>
@@ -82,7 +80,7 @@
                         <embedded>
                             <groupId>com.day.cq.mcm</groupId>
                             <artifactId>cq-mcm-sampleemailservice</artifactId>
-                            <target>/libs/mcm/sampleemailservice/install</target>
+                            <target>/apps/mcm/sampleemailservice/install</target>
 
                         </embedded>
                     </embeddeds>
