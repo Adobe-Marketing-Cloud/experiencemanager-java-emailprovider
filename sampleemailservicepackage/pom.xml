@@ -22,8 +22,8 @@
      <build>
         <resources>
             <resource>
-                <directory>${basedir}/serviceconfig</directory>
-                <targetPath>./apps/mcm/sampleemailservice</targetPath>
+                <directory>${basedir}/jcr_root</directory>
+                <targetPath>.</targetPath>
                 <filtering>false</filtering>
                 <excludes>
                     <exclude>**/.vlt</exclude>
@@ -40,27 +40,6 @@
                     <exclude>**/.idea/**</exclude>
                 </excludes>
             </resource>
-
-            <resource>
-                <directory>${basedir}/cloudconfig</directory>
-                <targetPath>./etc/cloudservices</targetPath>
-                <filtering>false</filtering>
-                <excludes>
-                    <exclude>**/.vlt</exclude>
-                    <exclude>**/.vltignore</exclude>
-                    <exclude>**/*.iml</exclude>
-                    <exclude>**/.classpath</exclude>
-                    <exclude>**/.project</exclude>
-                    <exclude>**/.settings/**</exclude>
-                    <exclude>**/.checkstyle</exclude>
-                    <exclude>**/.DS_Store</exclude>
-                    <exclude>**/target/**</exclude>
-                    <exclude>**/pom*</exclude>
-                    <exclude>**/META-INF/**</exclude>
-                    <exclude>**/.idea/**</exclude>
-                </excludes>
-            </resource>
-
         </resources>
 
         <plugins>
