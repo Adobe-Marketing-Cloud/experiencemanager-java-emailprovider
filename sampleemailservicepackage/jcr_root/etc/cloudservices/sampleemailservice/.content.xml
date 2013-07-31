@@ -17,6 +17,6 @@
         serviceAdminUrl="serviceadminurl"
         serviceUrl="emailserviceurl"
         showOnDashboard="{Boolean}true"
-        summaryPanelPath="/libs/mcm/sampleemailservice/components/sampleemailservicepage/panel"
+        summaryPanelPath="mcm/sampleemailservice/components/sampleemailservicepage/panel"
         thumbnailPath="thumbnailpath"/>
 </jcr:root>

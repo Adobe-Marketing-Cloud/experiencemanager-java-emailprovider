@@ -4,7 +4,7 @@
     jcr:primaryType="cq:Template"
     jcr:title="XEmailService Configuration"
     sling:resourceSuperType="cq/cloudserviceconfigs/templates/configpage"
-    allowedChildren="[/libs/mcm/sampleemailservice/templates/framework]"
+    allowedChildren="[mcm/sampleemailservice/templates/framework]"
     allowedPaths="[/etc/cloudservices/sampleemailservice(/.*)?]"
     ranking="{Long}90">
     <jcr:content

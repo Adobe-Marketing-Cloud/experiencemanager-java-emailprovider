@@ -8,7 +8,7 @@
         loadcontent="function(dialog, recs, opts, success){if(dialog.path) {dialog.addParams({'newsletter':dialog.path});}}"/>
     <items
         jcr:primaryType="nt:unstructured"
-        path="/libs/mcm/sampleemailservice/components/newsletter/publish/items.infinity.json"
+        path="mcm/sampleemailservice/components/newsletter/publish/items.infinity.json"
         xtype="cqinclude"/>
     <buttons jcr:primaryType="cq:WidgetCollection">
         <update
