@@ -55,12 +55,20 @@
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-scr-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>generate-scr-scrdescriptor</id>
+                        <goals>
+                            <goal>scr</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>maven-sling-plugin</artifactId>
                 <configuration>
-                    <slingUrlSuffix>/libs/mcm/install/</slingUrlSuffix>
+                    <slingUrlSuffix>/apps/mcm/install/</slingUrlSuffix>
                 </configuration>
             </plugin>
             <plugin>

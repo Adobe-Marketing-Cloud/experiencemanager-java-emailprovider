@@ -60,10 +60,8 @@
                             <groupId>com.day.cq.mcm</groupId>
                             <artifactId>cq-mcm-sampleemailservice</artifactId>
                             <target>/apps/mcm/sampleemailservice/install</target>
-
                         </embedded>
                     </embeddeds>
-
                 </configuration>
             </plugin>
 

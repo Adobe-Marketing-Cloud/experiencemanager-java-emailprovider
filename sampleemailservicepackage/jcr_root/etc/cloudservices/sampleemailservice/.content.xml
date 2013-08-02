@@ -14,9 +14,6 @@
         descriptionExtended="More info can be provided here"
         inclusionRank="{Long}100"
         ranking="60"
-        serviceAdminUrl="serviceadminurl"
-        serviceUrl="emailserviceurl"
         showOnDashboard="{Boolean}true"
-        summaryPanelPath="mcm/sampleemailservice/components/sampleemailservicepage/panel"
-        thumbnailPath="thumbnailpath"/>
+        summaryPanelPath="mcm/sampleemailservice/components/sampleemailservicepage/panel"/>
 </jcr:root>
