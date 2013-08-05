@@ -64,7 +64,7 @@
                     jcr:primaryType="cq:Widget"
                     ignoreData="{Boolean}true"
                     name="./providerName"
-                    value="XEmailService"
+                    value="xemailservice"
                     xtype="hidden"/>
                 <btnpanel
                     jcr:primaryType="cq:Widget"
