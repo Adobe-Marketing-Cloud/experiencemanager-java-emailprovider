@@ -27,6 +27,7 @@ import org.apache.sling.commons.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.HashMap;
 import java.util.Map;
 
 // TODO : add scr annotations - negative ranking or minimum ranking
@@ -42,25 +43,29 @@ public class XEmailServiceClientImpl implements XEmailServiceClient {
     }
 
     @Override
-    public JSONArray handleGetAccounts(Map<String, Object> requestParams) throws EmailServiceException {
+    public Object handleGetAccounts(Map<String, Object> requestParams) throws EmailServiceException {
 
         String userName = (String) requestParams.get("username");
         String password = (String) requestParams.get("password");
-        JSONArray accounts = null;
 
-        if("admin".equals(userName) && "admin".equals(password)){
-
-            accounts = new JSONArray();
-            try {
+        try {
+            if("admin".equals(userName) && "admin".equals(password)){
+                JSONArray accounts = new JSONArray();
                 JSONObject adminAccount = new JSONObject();
                 adminAccount.put("id", "adminID");
                 adminAccount.put("name", "accountName");
                 accounts.put(adminAccount);
-            } catch (JSONException e) {
-                log.error("JSON Exception in getting accounts information ");
+                return accounts;
             }
+            else{
+                Map<String, String> error = new HashMap<String, String>();
+                error.put("error", "Invalid Credentials");
+                return error;
+            }
+        } catch (JSONException e) {
+            log.error("JSON Exception in getting accounts information ");
         }
-        return accounts;
+        return null;
     }
 
     @Override

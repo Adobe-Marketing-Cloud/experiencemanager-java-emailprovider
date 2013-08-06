@@ -18,8 +18,8 @@ package com.day.cq.xemailservice;
 
 import com.day.cq.mcm.emailprovider.EmailServiceException;
 import com.day.cq.wcm.webservicesupport.Configuration;
-import org.apache.sling.commons.json.JSONArray;
 import org.apache.sling.commons.json.JSONObject;
+
 import java.util.Map;
 
 /**
@@ -49,7 +49,7 @@ public interface XEmailServiceClient {
      *
      * @throws EmailServiceException in case of errors
      */
-    public JSONArray handleGetAccounts(Map<String, Object> requestParams) throws EmailServiceException;
+    public Object handleGetAccounts(Map<String, Object> requestParams) throws EmailServiceException;
 
     /**
      * This function is used to add a subscriber to subscription lists.
