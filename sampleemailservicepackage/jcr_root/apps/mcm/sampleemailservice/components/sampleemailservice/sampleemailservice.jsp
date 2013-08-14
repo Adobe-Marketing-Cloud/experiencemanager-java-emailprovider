@@ -44,7 +44,8 @@ if(WCMMode.fromRequest(request)==WCMMode.EDIT || WCMMode.fromRequest(request)==W
 	Configuration configuration = null;
 	String[] services = pageProperties.getInherited("cq:cloudserviceconfigs", new String[]{});
 	if(cfgMgr != null) {
-	    configuration = cfgMgr.getConfiguration("xemailservice", services);
+        //here sampleemailservice corresponds to the node name of your service inside /etc/cloudservices/
+	    configuration = cfgMgr.getConfiguration("sampleemailservice", services);
 	}
 	if(configuration != null ){%>
 	    <input type="hidden"  name="cfgpath"  id="cfgpath" value="<%=configuration.getPath()%>"/>

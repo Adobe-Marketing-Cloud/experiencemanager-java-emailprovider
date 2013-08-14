@@ -40,7 +40,7 @@ final ResourceBundle resourceBundle = slingRequest.getResourceBundle(null);
         <li><div class="li-bullet"><strong><%=i18n.get("Username: ")%></strong><%= xssAPI.encodeForHTML(properties.get("username", "")) %></div></li>
         <li><div class="li-bullet"><strong><%=i18n.get("Password: ")%></strong><%= properties.get("password", "").replaceAll(".", "*") %></div></li>
         <li><div class="li-bullet"><strong><%=i18n.get("API End Point: ")%></strong><%= properties.get("apiendpoint", "") %></div></li>
-        <li><div class="li-bullet"><strong><%=i18n.get("Account ID: ") %></strong><%= properties.get("accountId", "") %></div></li>
+
         <li class="config-successful-message when-config-successful" style="display: none"><%=successfulConfiguration[0] %><br><%=successfulConfiguration[2] %><a href="/siteadmin"> #.</a>
         <%=successfulConfiguration[1]%> <a href="javascript: CQ.cloudservices.editNewConfiguration('<%=resPath%>','<%=resPath%>', false, '<%=i18n.get("Create Framework") %>')" 
             style="color: #336600;" title="<%=i18n.get("Add new XEmailService framework")%>"><b>+</b></a>.

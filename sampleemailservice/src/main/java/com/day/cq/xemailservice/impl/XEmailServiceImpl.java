@@ -24,6 +24,7 @@ import com.day.cq.wcm.webservicesupport.Configuration;
 import com.day.cq.xemailservice.XEmailServiceClient;
 import org.apache.felix.scr.annotations.*;
 
+
 import java.util.Map;
 
 
@@ -35,6 +36,7 @@ import java.util.Map;
 })
 public class XEmailServiceImpl implements EmailService {
 
+
     @Reference
     private XEmailServiceClient emailServiceClient;
 
@@ -42,6 +44,11 @@ public class XEmailServiceImpl implements EmailService {
 
     public static final String EMAIL_SERVICE_NAME = "xemailservice";
 
+    /**
+     * Please make sure that this value matches the "providerName" of cloud configuration.
+     * For more details refer README.
+     * @return EMAIL_SERVICE_NAME
+     */
     @Override
     public String getName() {
         return EMAIL_SERVICE_NAME;
@@ -51,13 +58,21 @@ public class XEmailServiceImpl implements EmailService {
         return cloudServiceConfig;
     }
 
+    /**
+     *
+     * @param emailServiceActions
+     * @param requestParams
+     * @param configuration
+     * @return
+     * @throws EmailServiceException, refer CQ error.log and console log
+     */
     @Override
     public Object execute(EmailServiceActions emailServiceActions, Map<String, Object> requestParams,
                           Configuration configuration) throws EmailServiceException {
 
         this.cloudServiceConfig = configuration;
 
-        // For connect and getAccounts operation, the cloudservice configuration will be null
+        // For connect and getAccounts operation, the CloudService configuration will be null
         switch(emailServiceActions){
             case CONNECT:
                 this.emailServiceClient.checkCredentials(requestParams);
@@ -113,9 +128,6 @@ public class XEmailServiceImpl implements EmailService {
 
             case GET_EMAILS:
                 return this.emailServiceClient.getEmails(requestParams, configuration);
-
-            case GET_EMAIL_CLASSIFICATIONS:
-                return this.emailServiceClient.getEmailClassifications(requestParams, configuration);
 
             case CREATE_SUBSCRIPTION_LIST:
                 return this.emailServiceClient.createSubscriptionList(requestParams, configuration);

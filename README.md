@@ -24,3 +24,8 @@ The SDK contains
 4. *components/sampleemailservice* and *components/sampleemailservicepage* corresponds to the could configuration page available while configuring the email service with CQ. For this sample there is property "componentReference" inside "/apps/mcm/sampleemailservice".
 5. templates corresponds to the couldservice configuration of email service.
 6. widgets corresponds to the client specific libraries i.e. you can write your own scripts. Please note the "categories="[mcm.xemailservice]", this is in sync with the http://localhost:4502/crx/de/index.jsp#/apps/mcm/sampleemailservice/components/sampleemailservice/sampleemailservice.jsp.
+7. More details can be found inside the respective folders.
+
+Build steps:
+1. Build sampleemailservice using maven command "mvn clean install". This command will create osgi bundle inside "target" folder. 
+2. Build sampleemailservicepackage using maven command "mvn clean install". This command will create CQ package inside "target" folder. This package has sampleemailservice bundle packaged together with js and jsp files, which are required for sample integration.

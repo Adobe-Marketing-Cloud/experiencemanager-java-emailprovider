@@ -49,5 +49,13 @@ CQ.EmailServiceActionsConfig.XEmailService = CQ.EmailServiceActionsConfig.XEmail
 
 //This script will call server for desired forms field which should be shown to the client, specific implementation can be provided at the server side.
 CQ.EmailServiceActionsConfig.XEmailService.showFormFields = function(component){
-	//For more information refer http://localhost:4502/crx/de/index.jsp#/libs/mcm/exacttarget/widgets
+    //For more information refer http://localhost:4502/crx/de/index.jsp#/libs/mcm/exacttarget/widgets
+    var cTab = component.findParentByType('dialogfieldset');
+    var formFields = cTab.findByType("static").filter(function(item){if(item.name=="formFields")return true;return false})[0];
+    if(formFields && formFields.html)
+        return;
+    var action = cTab.findParentByType("dialog").findByType("selection").filter(function(item){if(item.name=="./actionType")return true; return false})[0];
+    var filterParams = "actionType=" + action.getValue();
+    var attrMetadata = CQ.EmailServiceActionsConfig.getFormAttributes(filterParams);
+    CQ.EmailServiceActionsConfig.showFormAttributesMetadata(cTab,attrMetadata);
 };
