@@ -21,11 +21,11 @@ to invoke client APIs.
 - Sample integration uses following operations:
     1. getLists - This operation is invoked when author adds CQ "form" component on the authoring page and configures one of the following actions "E-Mail Service: Create Subscriber and add to list", "E-Mail Service: Send auto-responder email" or "E-Mail Service: Unsubscribe user from list".
        There actions corresponds to the action configuration available at http://localhost:4502/crx/de/index.jsp#/apps/mcm/sampleemailservice/components/actionConfigurations. This API call is intended to populate subscription list on CQ instance by pulling data from Email Service Provider.
-       //add sample image
+       ![image](https://raw.github.com/Adobe-Marketing-Cloud/experiencemanager-java-emailprovider/diagrams/images/getListAPIcall.png)
     2. getFormsField - This operation is invoked to show data on author configuration dialog box. This API call is intended to populate "attributes" which are mandatory or optional for corresponding operation.
-        //add sample image
+        ![image](https://raw.github.com/Adobe-Marketing-Cloud/experiencemanager-java-emailprovider/diagrams/images/getFormsFieldAPIcall.png)
     3. getEmailTools - This operation corresponds configure personalization data through "Text & Personalization" component. This API call is intended to pull personalization data from Email Service and make it available in CQ author instance.
-        //add sample image
+        ![image](https://raw.github.com/Adobe-Marketing-Cloud/experiencemanager-java-emailprovider/diagrams/images/getEmailToolsAPIcall.png)
     4. addToList - This operation is invoked when when subscriber actually submits the form which was previous configured on author instance. This API is invoked through configuration present at /libs/mcm/components/emailserviceactions/actions/addSubscriber/forward.jsp. This can be taken as reference to define other operations.
 - For more details refer sample code provided.
 
