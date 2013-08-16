@@ -27,6 +27,8 @@ The SDK contains
 7. widgets corresponds to the client specific libraries i.e. you can write your own scripts. Please note the "categories="[mcm.xemailservice]", this is in sync with the http://localhost:4502/crx/de/index.jsp#/apps/mcm/sampleemailservice/components/sampleemailservice/sampleemailservice.jsp.
 8. More details can be found inside the respective folders. [JAVA sample code](sampleemailservice/README.md) and [Cloudconfig and UI action configuration] ( sampleemailservicepackage/README.md)
 
-Build steps:
+Build steps
+-------------
+
 * Build sampleemailservice using maven command "mvn clean install". This command will create osgi bundle inside "target" folder. 
 * Build sampleemailservicepackage using maven command "mvn clean install". This command will create CQ package inside "target" folder. This package has sampleemailservice bundle packaged together with js and jsp files, which are required for sample integration.
