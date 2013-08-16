@@ -21,10 +21,11 @@ The SDK contains
 1. *components/actionConfigurations* node has the dialogs to the actions or operations corresponding to the service. Required parameters can be provided to the servlet through these configuration nodes.  For sample example few configuration nodes are available.
 2. *components/framework* corresponds to additional client side email service configuration, if any (Note: for more information you can refer already existing email service integration for ExactTarget and Silverpop available at http://localhost:4502/crx/de/index.jsp#/libs/mcm/). ExactTarget and Silverpop has additional configuration for personalization.
 3. *components/newsletter* corresponds to publishing the newsletter to your email service provider.
-4. *components/sampleemailservice* and *components/sampleemailservicepage* corresponds to the could configuration page available while configuring the email service with CQ. For this sample there is property "componentReference" inside "/apps/mcm/sampleemailservice".
-5. templates corresponds to the couldservice configuration of email service.
-6. widgets corresponds to the client specific libraries i.e. you can write your own scripts. Please note the "categories="[mcm.xemailservice]", this is in sync with the http://localhost:4502/crx/de/index.jsp#/apps/mcm/sampleemailservice/components/sampleemailservice/sampleemailservice.jsp.
-7. More details can be found inside the respective folders. [JAVA sample code](sampleemailservice/README.md) and [Cloudconfig and UI action configuration] ( sampleemailservicepackage/README.md)
+4. *components/sampleemailservice* corresponds to the service page, when email service is added to the CQ page.
+5. *components/sampleemailservicepage* corresponds to the cloud configuration page available while configuring the email service with CQ. For this sample there is property "componentReference" inside "/apps/mcm/sampleemailservice".
+6. templates corresponds to the couldservice configuration of email service.
+7. widgets corresponds to the client specific libraries i.e. you can write your own scripts. Please note the "categories="[mcm.xemailservice]", this is in sync with the http://localhost:4502/crx/de/index.jsp#/apps/mcm/sampleemailservice/components/sampleemailservice/sampleemailservice.jsp.
+8. More details can be found inside the respective folders. [JAVA sample code](sampleemailservice/README.md) and [Cloudconfig and UI action configuration] ( sampleemailservicepackage/README.md)
 
 Build steps:
 * Build sampleemailservice using maven command "mvn clean install". This command will create osgi bundle inside "target" folder. 
