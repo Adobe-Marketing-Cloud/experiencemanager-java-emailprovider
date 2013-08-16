@@ -27,5 +27,5 @@ The SDK contains
 7. More details can be found inside the respective folders.
 
 Build steps:
-1. Build sampleemailservice using maven command "mvn clean install". This command will create osgi bundle inside "target" folder. 
-2. Build sampleemailservicepackage using maven command "mvn clean install". This command will create CQ package inside "target" folder. This package has sampleemailservice bundle packaged together with js and jsp files, which are required for sample integration.
+* Build sampleemailservice using maven command "mvn clean install". This command will create osgi bundle inside "target" folder. 
+* Build sampleemailservicepackage using maven command "mvn clean install". This command will create CQ package inside "target" folder. This package has sampleemailservice bundle packaged together with js and jsp files, which are required for sample integration.
