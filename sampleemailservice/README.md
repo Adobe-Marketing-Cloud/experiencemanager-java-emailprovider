@@ -4,7 +4,7 @@ This module contains the java source code and java docs, which will guide you th
 - CQ has a listener which will register all the classes implementing EmailService.
 - The interface class has two main methods getName and execute, inherited from EmailService interface.
 
-  1. "getName" method should return the name corresponding to the third party Email Service Provider's name. Please make sure that this value is same as the one configured during service config http://localhost:4502/crx/de/index.jsp#/apps/mcm/sampleemailservice/components/sampleemailservicepage for property name "providerName".
+  1. "getName" method should return the name corresponding to the third party Email Service Provider's name. Please make sure that this value is same as the one configured during service config for property name "providerName". [Configure it here](http://localhost:4502/crx/de/index.jsp#/apps/mcm/sampleemailservice/components/sampleemailservicepage/dialog/items/general/items/providerName) (replace "localhost:4502" with appropriate values, if required).
   2. "execute" method is the method which gets invoked for any action being performed for the configured Email Service.
   3. Call to the specific client APIs can be invoked on the basis of operation name, which be available through EmailServiceActions parameter being passed to execute method.
   4. These Email Service Provider's operations can be called from server call through actions, which can be configured at http://localhost:4502/crx/de/index.jsp#/apps/mcm/sampleemailservice/components/actionConfigurations (@refer parent README).
