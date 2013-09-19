@@ -27,14 +27,21 @@ The SDK contains
 7. widgets corresponds to the client specific libraries i.e. you can write your own scripts. Please note the "categories="[mcm.xemailservice]", this is in sync with the http://localhost:4502/crx/de/index.jsp#/apps/mcm/sampleemailservice/components/sampleemailservice/sampleemailservice.jsp.
 8. More details can be found inside the respective folders. [JAVA sample code](sampleemailservice/README.md) and [Cloudconfig and UI action configuration] ( sampleemailservicepackage/README.md)
 
-Build steps
--------------
+####Build steps
 
 1. Build sampleemailservice using maven command "mvn clean install". This command will create osgi bundle inside "target" folder. 
 2. Build sampleemailservicepackage using maven command "mvn clean install". This command will create CQ package inside "target" folder. This package has sampleemailservice bundle packaged together with js and jsp files, which are required for sample integration.
 
-Deploy Steps
--------------
+####Deploy Steps
 
 1. Download and start the latest AEM quickstart. Refer [link](http://dev.day.com/docs/en/cq/current/exploring.html)
 2. Upload and install "sampleemailservicepackage" package created in build steps through http://localhost:4502/crx/packmgr/index.jsp. More info can be found [here](http://dev.day.com/docs/en/cq/current/administering/package_manager.html#Uploading Packages from Your File System).
+
+####Sample workflow
+
+1. After deploying "sampleemailservicepackage", configure the cloud configuration service through http://localhost:4502/etc/cloudservices.html.
+2. Select "Sample Email Service" and configure it using dummy data. username - admin and password - admin.
+3. Sample email provider integration steps are available [here](http://dev.day.com/docs/en/cq/current/wcm/campaigns.html#Integrating Email Service Provider with an email).
+
+
+
