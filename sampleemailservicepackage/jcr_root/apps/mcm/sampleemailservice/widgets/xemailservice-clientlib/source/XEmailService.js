@@ -18,8 +18,7 @@ if(CQ.mcm && CQ.mcm.utils.Newsletter){
 	
 	CQ.mcm.utils.Newsletter.XEmailService.PUBLISH_DIALOG_PATH = "/apps/mcm/sampleemailservice/components/newsletter/publish/dialog.infinity.json";
 	 //publish dialog path, which can be customized as per requirement at the location above)
-	CQ.mcm.utils.Newsletter.publishDialogPath= CQ.mcm.utils.Newsletter.XEmailService.PUBLISH_DIALOG_PATH;
-
+	
 	//@refer ExactTarget.js for more information http://localhost:4502/crx/de/index.jsp#/libs/mcm/exacttarget
 	//successful publish callback , enables the view published newsletter button
 	//to visit the published newsletter
