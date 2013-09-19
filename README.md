@@ -30,5 +30,11 @@ The SDK contains
 Build steps
 -------------
 
-* Build sampleemailservice using maven command "mvn clean install". This command will create osgi bundle inside "target" folder. 
-* Build sampleemailservicepackage using maven command "mvn clean install". This command will create CQ package inside "target" folder. This package has sampleemailservice bundle packaged together with js and jsp files, which are required for sample integration.
+1. Build sampleemailservice using maven command "mvn clean install". This command will create osgi bundle inside "target" folder. 
+2. Build sampleemailservicepackage using maven command "mvn clean install". This command will create CQ package inside "target" folder. This package has sampleemailservice bundle packaged together with js and jsp files, which are required for sample integration.
+
+Deploy Steps
+-------------
+
+1. Download and start the latest AEM quickstart. Refer [link](http://dev.day.com/docs/en/cq/current/exploring.html)
+2. Upload and install "sampleemailservicepackage" package created in build steps through http://localhost:4502/crx/packmgr/index.jsp. More info can be found [here](http://dev.day.com/docs/en/cq/current/administering/package_manager.html#Uploading Packages from Your File System).
