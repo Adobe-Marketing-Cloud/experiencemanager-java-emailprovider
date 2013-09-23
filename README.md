@@ -28,15 +28,9 @@ The SDK contains
 7. *widgets* corresponds to the client specific libraries i.e. you can write your own scripts. Please note the "categories="[mcm.xemailservice]", this is in sync with the http://localhost:4502/crx/de/index.jsp#/apps/myproject/sampleemailservice/components/sampleemailservice/sampleemailservice.jsp.
 8. More details can be found inside the respective folders. [JAVA sample code](bundle/README.md) and [Cloudconfig and UI action configuration] ( content/README.md)
 
-####Build steps
+####Build and deploy steps
 
-- At root folder build using maven command "mvn clean install". This command will create osgi bundle "myproject-bundle-1.0-SNAPSHOT.jar" inside "bundle/target" and content package "myproject-content-1.0-SNAPSHOT.jar" (with embedded OSGI bundle) inside "content/target" folder.
-- Learn more about how to build AEM projects with Maven http://dev.day.com/docs/en/cq/aem-how-tos/development/how-to-build-aem-projects-using-apache-maven.html.
-
-####Deploy Steps
-
-1. Download and start the latest AEM quickstart. Refer [link](http://dev.day.com/docs/en/cq/current/exploring.html)
-2. Upload and install crx package "myproject-content-1.0-SNAPSHOT.jar" from "content/target" (created in build steps) through http://localhost:4502/crx/packmgr/index.jsp. More info can be found [here](http://dev.day.com/docs/en/cq/current/administering/package_manager.html#Uploading Packages from Your File System).
+- Project can be build and installed through maven command "mvn -PautoInstallPackage clean install".
 
 ####Sample workflow
 

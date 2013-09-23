@@ -43,3 +43,6 @@ We have given sample implementations for some of the Email Provider Actions whic
 For more details refer sample code provided.
 
 Note: Sample data will be visible on author instance on successful integration with Sample package. Integration errors and exceptions will be visible in CQ error.log and console logs. In case of error, data on author UI will be empty.
+
+####Build and install
+- Maven command "mvn clean install sling:install" will build and install the bundle on your local CQ instance. For more information refer [plugin documentation](http://sling.apache.org/site/sling.html).

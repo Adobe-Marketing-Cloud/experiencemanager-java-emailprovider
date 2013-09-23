@@ -1,9 +1,9 @@
 This package specifies concrete steps and reference documentation to integrate any third party Email Service provider with Day CQ 5.6.1.
 
--	The final "sampleemailservicepackage" package contains an OSGI bundle and CQ content for sample integration.
+-	The final "myproject-content-1.0-SNAPSHOT" package contains an OSGI bundle and CQ content for sample integration.
 
 #####OSGI bundle 
-- "sampleemailservice" contains server side java code, more information can be found [here](../sampleemailservice)
+- "myproject-bundle-1.0-SNAPSHOT" contains server side java code, more information can be found [here](../sampleemailservice)
 
 #####CQ content
 
@@ -20,5 +20,5 @@ This package specifies concrete steps and reference documentation to integrate a
 -	Please note "category" property present inside /apps/myproject/sampleemailservice/widgets/xemailservice-clientlib. It's value is mcm.xemailservice. This category is being used to include js libraries through jsp, refer /apps/myproject/sampleemailservice/components/sampleemailservice/sampleemailservice.jsp.
 
 ####Build and install
--	CQ "sampleemailservicepackage" package can be build using maven command "mvn clean install". Created zip will be available in “target” folder which should be installed through package share.
--	Upload the package through package manager at http://localhost:4502/crx/packmgr/index.jsp and install it.
+-	Maven command "mvn -PautoInstallPackage clean install" will build and install "myproject-content-1.0-SNAPSHOT" package to the CQ server.
+-	Package can be build and uploaded manually by using command "mvn clean install". Upload the package "myproject-content-1.0-SNAPSHOT" created inside "target" through package manager at http://localhost:4502/crx/packmgr/index.jsp and install it.
